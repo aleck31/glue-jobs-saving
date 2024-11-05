@@ -34,7 +34,7 @@
   "numberOfWorkers" : 10,
   "workerType" : "G.1X",
   "executionClass" : "STANDARD",
-  "codeGenConfigurationNodes" : "{\"node-1730699164436\":{\"JDBCConnectorSource\":{\"AdditionalOptions\":{\"DataTypeMapping\":{},\"FilterPredicate\":\"\",\"JobBookmarkKeys\":[],\"JobBookmarkKeysSortOrder\":\"ASC\"},\"ConnectionName\":\"jdbc-mysql-db01\",\"ConnectionTable\":\"todo\",\"ConnectionType\":\"custom.jdbc\",\"ConnectorName\":\"JDBC 4.2\",\"Name\":\"JDBC 4.2\",\"Query\":\"\"}}}",
+  "codeGenConfigurationNodes" : "{\"node-1730699164436\":{\"JDBCConnectorSource\":{\"AdditionalOptions\":{\"DataTypeMapping\":{},\"FilterPredicate\":\"\",\"JobBookmarkKeys\":[],\"JobBookmarkKeysSortOrder\":\"ASC\"},\"ConnectionName\":\"jdbc-mysql-db01\",\"ConnectionTable\":\"todo\",\"ConnectionType\":\"custom.jdbc\",\"ConnectorName\":\"JDBC 4.2\",\"Name\":\"JDBC 4.2\",\"Query\":\"\"}},\"node-1730810757422\":{\"SparkSQL\":{\"Inputs\":[\"node-1730699164436\"],\"Name\":\"SQL Query\",\"SqlAliases\":[{\"Alias\":\"myDataSource\",\"From\":\"node-1730699164436\"}],\"SqlQuery\":\"select * from myDataSource\"}},\"node-1730810809614\":{\"S3GlueParquetTarget\":{\"AutoDataQuality\":{\"IsEnabled\":false},\"Compression\":\"snappy\",\"Inputs\":[\"node-1730810757422\"],\"Name\":\"Amazon S3\",\"PartitionKeys\":[],\"Path\":\"s3://aws-emr-565521294060-ap-southeast-1\",\"SchemaChangePolicy\":{\"EnableUpdateCatalog\":false}}}}",
   "sourceControlDetails" : {
     "provider" : "GITHUB",
     "repository" : "glue-jobs-saving",
